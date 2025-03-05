@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & FAQ - Online Voting System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .language-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-select select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-select select:hover {
+            background-color: #16a085;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .faq-section, .help-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .faq-section h2, .help-section h2 {
+            font-size: 24px;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .faq-item h3 {
+                font-size: 16px;
+            }
+
+            .faq-item p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="header-title">Help & FAQ</h1>
+        <div class="language-select">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="mr">Marathi</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="help-section">
+            <h2 id="help-title">Need Help?</h2>
+            <p id="help-content">If you are experiencing any issues or have any questions regarding the online voting process, you’ve come to the right place! Below you will find answers to common questions as well as contact information if you need further assistance.</p>
+        </div>
+
+        <div class="faq-section">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3 id="faq-q1">1. How do I register for voting?</h3>
+                <p id="faq-a1">To register for voting, click on the "Register" button on the homepage. Fill in your personal details, such as name, email address, and a password.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 id="faq-q2">2. How do I cast my vote?</h3>
+                <p id="faq-a2">Log in, navigate to the "Vote" page, select your candidate, and submit your vote.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 id="faq-q3">3. Is my vote anonymous?</h3>
+                <p id="faq-a3">Yes, your vote is completely anonymous. We use encryption to ensure your vote cannot be traced back to you.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text">Online Voting System &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                header: "Help & FAQ",
+                helpTitle: "Need Help?",
+                helpContent: "If you are experiencing any issues or have any questions regarding the online voting process, you’ve come to the right place! Below you will find answers to common questions as well as contact information if you need further assistance.",
+                faqTitle: "Frequently Asked Questions",
+                faqQ1: "1. How do I register for voting?",
+                faqA1: "To register for voting, click on the 'Register' button on the homepage. Fill in your personal details, such as name, email address, and a password.",
+                faqQ2: "2. How do I cast my vote?",
+                faqA2: "Log in, navigate to the 'Vote' page, select your candidate, and submit your vote.",
+                faqQ3: "3. Is my vote anonymous?",
+                faqA3: "Yes, your vote is completely anonymous. We use encryption to ensure your vote cannot be traced back to you.",
+                footer: "Online Voting System © 2024. All Rights Reserved."
+            },
+            hi: {
+                header: "सहायता और सामान्य प्रश्न",
+                helpTitle: "मदद चाहिए?",
+                helpContent: "यदि आपको ऑनलाइन मतदान प्रक्रिया से संबंधित कोई समस्या हो, तो आप सही जगह पर हैं। नीचे सामान्य प्रश्नों के उत्तर और संपर्क जानकारी दी गई है।",
+                faqTitle: "सामान्य प्रश्न",
+                faqQ1: "1. मैं मतदान के लिए पंजीकरण कैसे करूं?",
+                faqA1: "पंजीकरण के लिए, होमपेज पर 'पंजीकरण करें' बटन पर क्लिक करें और अपने व्यक्तिगत विवरण भरें।",
+                faqQ2: "2. मैं अपना वोट कैसे डालूं?",
+                faqA2: "लॉग इन करें, 'वोट' पेज पर जाएं, उम्मीदवार चुनें और अपना वोट सबमिट करें।",
+                faqQ3: "3. क्या मेरा वोट गुप्त है?",
+                faqA3: "हां, आपका वोट पूरी तरह से गुप्त है। हम यह सुनिश्चित करने के लिए एन्क्रिप्शन का उपयोग करते हैं कि आपका वोट ट्रैक नहीं किया जा सकता।",
+                footer: "ऑनलाइन वोटिंग सिस्टम © 2024। सभी अधिकार सुरक्षित।"
+            },
+            mr: {
+                header: "सहायता आणि वारंवार विचारले जाणारे प्रश्न",
+                helpTitle: "मदत हवी आहे?",
+                helpContent: "जर तुम्हाला ऑनलाइन मतदान प्रक्रियेबद्दल काही समस्या किंवा प्रश्न असतील, तर तुम्ही योग्य ठिकाणी आला आहात. खाली सामान्य प्रश्नांची उत्तरे आणि संपर्क माहिती दिली आहे.",
+                faqTitle: "वारंवार विचारले जाणारे प्रश्न",
+                faqQ1: "1. मी मतदानासाठी नोंदणी कशी करू?",
+                faqA1: "नोंदणीसाठी, होमपेजवर 'नोंदणी करा' बटणावर क्लिक करा आणि तुमचा वैयक्तिक तपशील भरा.",
+                faqQ2: "2. मी माझा मत कसा द्यावा?",
+                faqA2: "लॉगिन करा, 'मत' पृष्ठावर जा, उमेदवार निवडा आणि तुमचे मत सबमिट करा.",
+                faqQ3: "3. माझे मत गुप्त आहे का?",
+                faqA3: "होय, तुमचे मत पूर्णतः गुप्त आहे. तुमचे मत ट्रॅक होऊ नये यासाठी आम्ही एन्क्रिप्शन वापरतो.",
+                footer: "ऑनलाइन मतदान प्रणाली © 2024. सर्व हक्क राखीव."
+            }
+        };
+
+        const languageSelect = document.getElementById("language-select");
+
+        languageSelect.addEventListener("change", () => {
+            const selectedLang = languageSelect.value;
+            const translation = translations[selectedLang];
+
+            document.getElementById("header-title").innerText = translation.header;
+            document.getElementById("help-title").innerText = translation.helpTitle;
+            document.getElementById("help-content").innerText = translation.helpContent;
+            document.getElementById("faq-title").innerText = translation.faqTitle;
+            document.getElementById("faq-q1").innerText = translation.faqQ1;
+            document.getElementById("faq-a1").innerText = translation.faqA1;
+            document.getElementById("faq-q2").innerText = translation.faqQ2;
+            document.getElementById("faq-a2").innerText = translation.faqA2;
+            document.getElementById("faq-q3").innerText = translation.faqQ3;
+            document.getElementById("faq-a3").innerText = translation.faqA3;
+            document.getElementById("footer-text").innerText = translation.footer;
+        });
+    </script>
+</body>
+</html>

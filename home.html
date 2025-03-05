@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e8fa4b18bd.js" crossorigin="anonymous"></script>
+    <title>Responsive Online Voting System</title>
+    <style>
+        body {
+            margin: auto;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1cbe9e;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+        }
+        .btn-open-popup {
+            padding: 10px 20px;
+            font-size: 15px;
+            background-color: rgb(243, 134, 9);
+            color: #fff;
+            border: none;
+            border-radius: 8%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .language-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-select select {
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .container {
+            background-image: url("image2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .container h2 {
+            font-size: xx-large;
+            font-weight: bolder;
+            color: #111111;
+            margin-bottom: 60px;
+            margin-top: 300px;
+        }
+        .container p {
+            font-size:x-large;
+            font-weight:bold;
+            color: #1b1b1b;
+            margin-bottom: 200px;
+            margin-top: 30px;
+            max-width: 700px;
+        }
+        .btn {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 50px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #16a085;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        .language-select {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-select select {
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: 200;
+    border-radius: 5px;
+    background-color: #1abc9c; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+
+.language-select select:hover {
+    background-color: #16a085; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.language-select select:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.8); /* Glow effect on focus */
+}
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                padding: 20px;
+            }
+            .btn {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Online Voting System</h1>
+        <p id="main-subtitle" style="text-weight:bold;">Your vote matters. Secure, simple, and fair.</p>
+    </header>
+
+    <div class="language-select">
+        <label for="language"></label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="mr">मराठी</option>
+        </select>
+    </div>
+
+    <nav>
+        <a href="#" id="nav-home">Home</a>
+        <a href="help.html" id="nav-help">Help</a>
+        <a href="about.html" id="nav-about">About Us</a>
+        <a href="contact.html" id="nav-contact">Contact</a>
+        <a href="Result.html" id="nav-result">Result</a>
+        <a href="login.html" id="nav-login">Log In</a>
+    </nav>
+
+    <div class="container">
+        <h2 id="upcoming-election" styla="font-weight:bolder">Upcoming Election: 2024 National Elections</h2>
+        <p id="participate-msg">
+            Participate in the upcoming elections and have your voice heard!
+            Register today and get ready to cast your vote for the candidates that represent your vision for the future.
+        </p>
+        <a href="Registeration.html" class="btn" id="btn-register">Registration</a>
+    </div>
+    <footer>
+        <p id="footer-msg">Online Voting System &copy; 2024 - All Rights Reserved</p>
+    </footer>
+        <script src="language.js"></script>
+</body>
+</html>

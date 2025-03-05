@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Online Voting System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .language-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #1abc9c;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .language-select select {
+            padding: 8px 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            background-color: #16a085;
+        }
+
+        .language-select select:hover {
+            background-color: #1abc9c;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .contact-section, .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .contact-section h2, .contact-form h2 {
+            font-size: 28px;
+            color: #1abc9c;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info div {
+            flex-basis: 45%;
+            margin-bottom: 20px;
+        }
+
+        .contact-info div h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info div p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 28px;
+            color: #1abc9c;
+            margin-bottom: 20px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            font-size: 18px;
+            color: white;
+            background-color: #1abc9c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #16a085;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info div {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language selection dropdown -->
+    <div class="language-select">
+        <select id="languageDropdown" onchange="changeLanguage()">
+            <option value="en" selected>English</option>
+            <option value="hi">हिंदी</option>
+            <option value="mr">मराठी</option>
+        </select>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1 id="headerTitle">Contact Us</h1>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Contact Info Section -->
+        <div class="contact-section" id="contactSection">
+            <h2 id="getInTouch">Get in Touch</h2>
+            <div class="contact-info" id="contactInfo">
+                <div id="customerSupportSection">
+                    <h3 id="customerSupportTitle">Customer Support</h3>
+                    <p id="customerSupportEmail1">Email: yaminibabhulkar52@gmial.com</p>
+                    <p id="customerSupportEmail2">Email: mehvishsheikh99@gmail.com</p>
+                    <p id="customerSupportPhone">Phone: 1-800-VOTE-NOW (9370189442)</p>
+                    <p id="customerSupportDesc">Our customer support team is available 24/7 to assist you with any issues or questions you may have regarding the voting process.</p>
+                </div>
+                <div id="technicalSupportSection">
+                    <h3 id="technicalSupportTitle">Technical Support</h3>
+                    <p id="technicalSupportEmail1">Email: sakshikhode21@gmail.com</p>
+                    <p id="technicalSupportEmail2">Email: shrutiwadhekar613@gmail.com</p>
+                    <p id="technicalSupportPhone">Phone: 1-800-TECH-HELP (9730743336)</p>
+                    <p id="technicalSupportDesc">For technical difficulties or issues related to the platform, reach out to our technical support team for assistance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form" id="contactForm">
+            <h2 id="sendUsMessage">Send Us a Message</h2>
+            <form id="contactFormContent" action="#" method="POST">
+                <label for="name" id="labelName">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email" id="labelEmail">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="message" id="labelMessage">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>Online Voting System &copy; 2024. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Language Switching -->
+    <script>
+        const translations = {
+            en: {
+                title: "Contact Us",
+                header: "Contact Us",
+                getInTouch: "Get in Touch",
+                customerSupport: "Customer Support",
+                customerSupportEmail1: "Email: yaminibabhulkar52@gmial.com",
+                customerSupportEmail2: "Email: mehvishsheikh99@gmail.com",
+                customerSupportPhone: "Phone: 1-800-VOTE-NOW (9370189442)",
+                customerSupportDesc: "Our customer support team is available 24/7 to assist you with any issues or questions you may have regarding the voting process.",
+                technicalSupport: "Technical Support",
+                technicalSupportEmail1: "Email: sakshikhode21@gmail.com",
+                technicalSupportEmail2: "Email: shrutiwadhekar613@gmail.com",
+                technicalSupportPhone: "Phone: 1-800-TECH-HELP (9730743336)",
+                technicalSupportDesc: "For technical difficulties or issues related to the platform, reach out to our technical support team for assistance.",
+                sendUsMessage: "Send Us a Message",
+                fullName: "Full Name",
+                emailAddress: "Email Address",
+                yourMessage: "Your Message",
+                submit: "Submit"
+            },
+            hi: {
+                title: "हमसे संपर्क करें",
+                header: "हमसे संपर्क करें",
+                getInTouch: "संपर्क करें",
+                customerSupport: "ग्राहक समर्थन",
+                customerSupportEmail1: "ईमेल: yaminibabhulkar52@gmial.com",
+                customerSupportEmail2: "ईमेल: mehvishsheikh99@gmail.com",
+                customerSupportPhone: "फोन: 1-800-VOTE-NOW (9370189442)",
+                customerSupportDesc: "हमारी ग्राहक सहायता टीम 24/7 आपकी किसी भी समस्या या प्रश्न के लिए उपलब्ध है।",
+                technicalSupport: "तकनीकी समर्थन",
+                technicalSupportEmail1: "ईमेल: sakshikhode21@gmail.com",
+                technicalSupportEmail2: "ईमेल: shrutiwadhekar613@gmail.com",
+                technicalSupportPhone: "फोन: 1-800-TECH-HELP (9730743336)",
+                technicalSupportDesc: "तकनीकी समस्याओं के लिए हमारी तकनीकी सहायता टीम से संपर्क करें।",
+                sendUsMessage: "हमें एक संदेश भेजें",
+                fullName: "पूरा नाम",
+                emailAddress: "ईमेल पता",
+                yourMessage: "आपका संदेश",
+                submit: "जमा करें"
+            },
+            mr: {
+                title: "संपर्क करा",
+                header: "संपर्क करा",
+                getInTouch: "संपर्क करा",
+                customerSupport: "ग्राहक सहाय्य",
+                customerSupportEmail1: "ईमेल: yaminibabhulkar52@gmial.com",
+                customerSupportEmail2: "ईमेल: mehvishsheikh99@gmail.com",
+                customerSupportPhone: "फोन: 1-800-VOTE-NOW (9370189442)",
+                customerSupportDesc: "आमच्या ग्राहक सहाय्यक टीमला 24/7 कोणत्याही समस्यांसाठी संपर्क करा।",
+                technicalSupport: "तांत्रिक सहाय्य",
+                technicalSupportEmail1: "ईमेल: sakshikhode21@gmail.com",
+                technicalSupportEmail2: "ईमेल: shrutiwadhekar613@gmail.com",
+                technicalSupportPhone: "फोन: 1-800-TECH-HELP (9730743336)",
+                technicalSupportDesc: "तांत्रिक समस्यांसाठी आमच्या तांत्रिक सहाय्यक टीमला संपर्क करा।",
+                sendUsMessage: "आम्हाला एक संदेश पाठवा",
+                fullName: "पूर्ण नाव",
+                emailAddress: "ईमेल पत्ता",
+                yourMessage: "तुम्हा",
+                submit: "जमा करा"
+            }
+        };
+
+        function changeLanguage() {
+            const language = document.getElementById("languageDropdown").value;
+            const translation = translations[language];
+
+            document.getElementById("headerTitle").innerText = translation.title;
+            document.getElementById("getInTouch").innerText = translation.getInTouch;
+            document.getElementById("customerSupportTitle").innerText = translation.customerSupport;
+            document.getElementById("customerSupportEmail1").innerText = translation.customerSupportEmail1;
+            document.getElementById("customerSupportEmail2").innerText = translation.customerSupportEmail2;
+            document.getElementById("customerSupportPhone").innerText = translation.customerSupportPhone;
+            document.getElementById("customerSupportDesc").innerText = translation.customerSupportDesc;
+            document.getElementById("technicalSupportTitle").innerText = translation.technicalSupport;
+            document.getElementById("technicalSupportEmail1").innerText = translation.technicalSupportEmail1;
+            document.getElementById("technicalSupportEmail2").innerText = translation.technicalSupportEmail2;
+            document.getElementById("technicalSupportPhone").innerText = translation.technicalSupportPhone;
+            document.getElementById("technicalSupportDesc").innerText = translation.technicalSupportDesc;
+            document.getElementById("sendUsMessage").innerText = translation.sendUsMessage;
+            document.getElementById("labelName").innerText = translation.fullName;
+            document.getElementById("labelEmail").innerText = translation.emailAddress;
+            document.getElementById("labelMessage").innerText = translation.yourMessage;
+            document.getElementById("submitButton").innerText = translation.submit;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Voting System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .about-section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #1abc9c;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .features-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .feature {
+            flex-basis: 45%;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .team-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h2 {
+            font-size: 30px;
+            color: #1abc9c;
+            margin-bottom: 20px;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+            flex-basis: 30%;
+            position:"absolute";
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #1abc9c;
+        }
+
+        .team-member h4 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+        .language-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-select select {
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 200;
+            border-radius: 5px;
+            background-color: #1abc9c; /* Button background color */
+            color: white; /* Text color */
+            border: none; /* Remove default border */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+        }
+
+        .language-select select:hover {
+            background-color: #16a085; /* Darker green on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        .language-select select:focus {
+            outline: none; /* Remove focus outline */
+            box-shadow: 0 0 10px rgba(26, 188, 156, 0.8); /* Glow effect on focus */
+        }
+
+        @media (max-width: 768px) {
+            .features-list .feature, 
+            .team-members .team-member {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-select" style="margin-right: 250px;">
+        <select class="language-select" id="language-select">
+            <option value="en">English</option>
+            <option value="mr">Marathi</option>
+            <option value="hi">Hindi</option>
+        </select>
+    </div>
+    <div class="header">
+        <h1 id="title">About Our Voting System</h1>
+    </div>
+
+    <div class="container">
+        <!-- About Section -->
+        <div class="about-section">
+            <h2 id="aboutUs">About Us</h2>
+            <p id="aboutText">
+                Welcome to the Online Voting System, where your voice matters! We are dedicated to making the voting process secure, reliable, and accessible to everyone. Our platform is designed to make elections easier, faster, and more transparent. We strive to provide a seamless voting experience for both organizers and voters, ensuring the integrity of each vote cast.
+            </p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="about-section">
+            <h2 id="whyChooseUs">Why Choose Us?</h2>
+            <div class="features-list">
+                <div class="feature">
+                    <h3 id="security">Security</h3>
+                    <p id="securityText">
+                        Our system uses top-level encryption and security measures to ensure that every vote is protected. We prioritize data privacy and election integrity.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 id="userFriendly">User Friendly</h3>
+                    <p id="userFriendlyText">
+                        Designed with simplicity in mind, our platform is easy to navigate for all types of users, ensuring that everyone can cast their vote with ease.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 id="realTimeResults">Real-Time Results</h3>
+                    <p id="realTimeResultsText">
+                        Our system provides real-time voting results, allowing election organizers to see results as they come in and ensuring complete transparency.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 id="globalAccess">Global Access</h3>
+                    <p id="globalAccessText">
+                        Our platform supports remote voting from anywhere in the world, allowing participants to vote regardless of their location.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2 style="margin-bottom: 70px;" id="meetTeam">Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member" style="margin-left: 70px;">
+                    <img src="shruuuu.jpg" alt="Team Member 1">
+                    <h4 id="team1">Shruti Wadhekar</h4>
+                    <p id="team1Desc">Exclusive Team Member 1</p>
+                </div>
+                <div class="team-member">
+                    <img src="saku.jpg" alt="Team Member 2">
+                    <h4 id="team2">Sakshi khode</h4>
+                    <p id="team2Desc"> Exclusive Team Member 2</p>
+                </div>
+                <div class="team-member" style="margin-top: 50px;margin-left: 70px;">
+                    <img src="Yamini.jpg" alt="Team Member 3">
+                    <h4 id="team3">Yamini babhulkar</h4>
+                    <p id="team3Desc">Exclusive Team Member 3</p>
+                </div>
+                <div class="team-member" style="margin-top: 50px;">
+                    <img src="sheikh.jpg" alt="Team Member 3">
+                    <h4 id="team4">Mehwish sheikh</h4>
+                    <p id="team4Desc">Exclusive Team Memeber 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="end">Online Voting System &copy; 2024. All Rights Reserved.</p>
+    </footer>
+           <script >const translations = {
+        en: {
+            title:"About Our Voting System",
+            aboutUs: "About Us",
+            aboutText: "Welcome to the Online Voting System, where your voice matters! We are dedicated to making the voting process secure, reliable, and accessible to everyone. Our platform is designed to make elections easier, faster, and more transparent. We strive to provide a seamless voting experience for both organizers and voters, ensuring the integrity of each vote cast.",
+            whyChooseUs: "Why Choose Us?",
+            security: "Security",
+            securityText: "Our system uses top-level encryption and security measures to ensure that every vote is protected. We prioritize data privacy and election integrity.",
+            userFriendly: "User Friendly",
+            userFriendlyText: "Designed with simplicity in mind, our platform is easy to navigate for all types of users, ensuring that everyone can cast their vote with ease.",
+            realTimeResults: "Real-Time Results",
+            realTimeResultsText: "Our system provides real-time voting results, allowing election organizers to see results as they come in and ensuring complete transparency.",
+            globalAccess: "Global Access",
+            globalAccessText: "Our platform supports remote voting from anywhere in the world, allowing participants to vote regardless of their location.",
+            meetTeam: "Meet Our Team",
+            team1: "Shruti Wadhekar",
+            team1Desc: "Exclusive Team Member 1",
+            team2: "Sakshi Khode",
+            team2Desc: "Exclusive Team Member 2",
+            team3: "Yamini Babhulkar",
+            team3Desc: "Exclusive Team Member 3",
+            team4: "Mehwish Sheikh",
+            team4Desc: "Exclusive Team Member 4",
+            end:"Online Voting System &copy; 2024. All Rights Reserved."
+        },
+        hi: {
+            title:"हमारे मतदान प्रणाली के बारे में",
+            aboutUs: "हमारे बारे में",
+            aboutText: "ऑनलाइन वोटिंग सिस्टम में आपका स्वागत है, जहां आपकी आवाज़ मायने रखती है! हम मतदान प्रक्रिया को सुरक्षित, विश्वसनीय और सभी के लिए सुलभ बनाने के लिए समर्पित हैं।",
+            whyChooseUs: "हमें क्यों चुनें?",
+            security: "सुरक्षा",
+            securityText: "हमारा सिस्टम शीर्ष स्तर के एन्क्रिप्शन और सुरक्षा उपायों का उपयोग करता है।",
+            userFriendly: "उपयोग में आसान",
+            userFriendlyText: "हमारा प्लेटफ़ॉर्म सभी उपयोगकर्ताओं के लिए आसान और सरल है।",
+            realTimeResults: "तत्काल परिणाम",
+            realTimeResultsText: "हमारे सिस्टम से तुरंत चुनाव परिणाम देख सकते हैं।",
+            globalAccess: "वैश्विक पहुंच",
+            globalAccessText: "हमारा प्लेटफ़ॉर्म दुनिया में कहीं से भी मतदान को सक्षम बनाता है।",
+            meetTeam: "हमारी टीम से मिलें",
+            team1: "श्रुति वाधेकर",
+            team1Desc: "विशिष्ट टीम सदस्य 1",
+            team2: "साक्षी खोड़े",
+            team2Desc: "विशिष्ट टीम सदस्य 2",
+            team3: "यामिनी बाभुलकर",
+            team3Desc: "विशिष्ट टीम सदस्य 3",
+            team4: "मेहविश शेख",
+            team4Desc: "विशिष्ट टीम सदस्य 4",
+        },
+        mr: {
+            title:"आमच्या मतदान प्रणालीबद्दल",
+            aboutUs: "आमच्याविषयी",
+            aboutText: "ऑनलाइन मतदान प्रणालीमध्ये आपले स्वागत आहे, जिथे आपला आवाज महत्त्वाचा आहे! आम्ही मतदान प्रक्रिया सुरक्षित, विश्वासार्ह, आणि सर्वांसाठी सुलभ करण्यासाठी वचनबद्ध आहोत.",
+            whyChooseUs: "आम्हाला का निवडा?",
+            security: "सुरक्षा",
+            securityText: "आमची प्रणाली शीर्ष स्तरावर एन्क्रिप्शन आणि सुरक्षा उपाय वापरते.",
+            userFriendly: "वापरण्यास सुलभ",
+            userFriendlyText: "सर्व वापरकर्त्यांसाठी आमचे प्लॅटफॉर्म सोपे आहे.",
+            realTimeResults: "तात्काळ निकाल",
+            realTimeResultsText: "आमच्या प्रणालीमुळे निकाल तत्काळ पाहता येतात.",
+            globalAccess: "जागतिक प्रवेश",
+            globalAccessText: "आमची प्रणाली जगात कोठूनही मतदान करण्यास सक्षम करते.",
+            meetTeam: "आमच्या टीमची ओळख",
+            team1: "श्रुती वाधेकर",
+            team1Desc: "विशेष टीम सदस्य 1",
+            team2: "साक्षी खोड़े",
+            team2Desc: "विशेष टीम सदस्य 2",
+            team3: "यामिनी बाभुळकर",
+            team3Desc: "विशेष टीम सदस्य 3",
+            team4: "मेहविश शेख",
+            team4Desc: "विशेष टीम सदस्य 4",
+        },
+    };
+    
+    document.getElementById("language-select").addEventListener("change", function () {
+    const selectedLanguage = this.value;
+
+    const translate = (id, text) => {
+        document.getElementById(id).innerText = text;
+    };
+
+    const keysToTranslate = [
+        "title","aboutUs", "aboutText", "whyChooseUs",
+        "security", "securityText", "userFriendly",
+        "userFriendlyText", "realTimeResults", "realTimeResultsText",
+        "globalAccess", "globalAccessText", "meetTeam",
+        "team1", "team1Desc", "team2", "team2Desc",
+        "team3", "team3Desc", "team4", "team4Desc"
+    ];
+
+    keysToTranslate.forEach(key => {
+        translate(key, translations[selectedLanguage][key]);
+    });
+});
+    </script>
+
+</body>
+</html>
+    </script>
+</body>
+</html>

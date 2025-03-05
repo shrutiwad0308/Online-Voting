@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .language-select {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-select select {
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: 200;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+
+.language-select select:hover {
+    background-color: #4CAF50; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.language-select select:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 10px rgba(137, 246, 142, 0.8); /* Glow effect on focus */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="language-select" style="margin-right: 400px; margin-top: 50px;">
+        <select class="language-select" id="language-select">
+            <option value="en">English</option>
+            <option value="mr">Marathi</option>
+            <option value="hi">Hindi</option>
+        </select>
+        </div>
+    <h1 id="title">Election Results</h1>
+    <table style="margin-top: 100px;">
+        <thead>
+            <tr>
+                <th id="candidateHeader">Candidate</th>
+                <th id="votesHeader">Votes</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+            <!-- Dynamic results will be inserted here -->
+        </tbody>
+    </table>
+    <script>
+        // Predefined list of candidates and votes
+        const candidates = [
+            { candidate_name: "Shruti Wadhekar", vote_count: 20 },
+            { candidate_name: "Sakshi Khode", vote_count: 22 },
+            { candidate_name: "Yamini Babhulkar", vote_count: 23 },
+            { candidate_name: "Mehwish Sheikh", vote_count: 24 }
+        ];
+        const translations = {
+            en: {
+                title: "Election Results",
+                candidateHeader: "Candidate",
+                votesHeader: "Votes",
+                candidates: [
+                    { candidate_name: "Shruti Wadhekar", vote_count: 20 },
+                    { candidate_name: "Sakshi Khode", vote_count: 22 },
+                    { candidate_name: "Yamini Babhulkar", vote_count: 23 },
+                    { candidate_name: "Mehwish Sheikh", vote_count: 24 }
+                ]
+            },
+            mr: {
+                title: "मत निकाल",
+                candidateHeader: "उमेदवार",
+                votesHeader: "मत",
+                candidates: [
+                    { candidate_name: "श्रुती वाधेकर", vote_count: 20 },
+                    { candidate_name: "साक्षी खोदे", vote_count: 22 },
+                    { candidate_name: "यामिनी बाबूलकर", vote_count: 23 },
+                    { candidate_name: "मेव्हिश शेख", vote_count: 24 }
+                ]
+            },
+            hi: {
+                title: "चुनाव परिणाम",
+                candidateHeader: "उम्मीदवार",
+                votesHeader: "मत",
+                candidates: [
+                    { candidate_name: "श्रुति वाधेकर", vote_count: 20 },
+                    { candidate_name: "साक्षी खोड़े", vote_count: 22 },
+                    { candidate_name: "यामिनी बाबूलकर", vote_count: 23 },
+                    { candidate_name: "मेहविश शेख", vote_count: 24 }
+                ]
+            }
+        };
+        // Function to change the language and update the content
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById('language-select').value;
+            const translation = translations[selectedLanguage];
+
+            // Update title and headers
+            document.getElementById('title').innerText = translation.title;
+            document.getElementById('candidateHeader').innerText = translation.candidateHeader;
+            document.getElementById('votesHeader').innerText = translation.votesHeader;
+        }
+
+        // Display the candidates in the table
+        const resultsTable = document.getElementById('results');
+        candidates.forEach(result => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${result.candidate_name}</td>
+                <td>${result.vote_count}</td>
+            `;
+            resultsTable.appendChild(row);
+        });
+    </script>
+</body>
+</html>
